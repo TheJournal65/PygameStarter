@@ -22,6 +22,7 @@ class Game:
         self.screen = pg.display.set_mode(RES)
         self.clock = pg.time.Clock()
         self.delta_time = 1
+        self.image = pg.image.load(IMG_FOLDER + "/laferrari.jpg")
         self.new_game()
 
     def new_game(self):
@@ -36,6 +37,10 @@ class Game:
     def draw(self):
         # Draw to the main Screen
         self.screen.fill('black')
+        
+        # Draw the image
+        self.screen.blit(self.image, (0, 100, self.image.get_width(), self.image.get_height()))
+        
         # Drawn screen to forefront
         pg.display.update()
 
