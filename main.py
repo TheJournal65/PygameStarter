@@ -39,7 +39,7 @@ class Game:
         self.screen.fill('black')
         
         # Draw the image
-        self.screen.blit(self.image, (0, 100, self.image.get_width(), self.image.get_height()))
+        self.screen.blit(self.image, (0, 0, self.image.get_width(), self.image.get_height()))
         
         # Drawn screen to forefront
         pg.display.update()
